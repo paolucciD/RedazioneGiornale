@@ -11,7 +11,7 @@ namespace ProgettoGiornale.Models
 
         public Commento()
         {
-            
+
         }
 
         public override string ToString()

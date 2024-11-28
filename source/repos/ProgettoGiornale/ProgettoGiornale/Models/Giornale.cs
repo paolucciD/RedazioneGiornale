@@ -7,6 +7,5 @@ namespace ProgettoGiornale.Models
 {
     public class Giornale
     {
-        
     }
 }

@@ -5,16 +5,16 @@ using System.Text;
 
 namespace ProgettoGiornale.Models
 {
-    public class CommentoDellaRedazione:Commento
+    public class CommentoDellaRedazione : Commento
     {
-        public CommentoDellaRedazione():base()
+        public CommentoDellaRedazione() : base()
         {
-            
+
         }
 
         public override string ToString()
         {
-            return $"***"+base.ToString();
+            return $"***" + base.ToString();
         }
     }
 }

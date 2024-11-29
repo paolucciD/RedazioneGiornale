@@ -33,5 +33,15 @@ namespace ProgettoGiornale.Models
             }
             return sb.ToString();
         }
+
+        public static bool operator ==(Articolo a1, Articolo a2)
+        {
+            return a1.Autore == a2.Autore && a1.Titolo == a2.Titolo;
+        }
+
+        public static bool operator !=(Articolo a1, Articolo a2)
+        {
+            return !(a1.Autore == a2.Autore && a1.Titolo == a2.Titolo);
+        }
     }
 }

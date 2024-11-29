@@ -7,7 +7,7 @@ namespace ProgettoGiornale.Models
 {
     public class CommentoDellaRedazione : Commento
     {
-        public CommentoDellaRedazione() : base()
+        public CommentoDellaRedazione(string t) : base(t)
         {
 
         }

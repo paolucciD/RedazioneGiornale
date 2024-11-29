@@ -9,9 +9,9 @@ namespace ProgettoGiornale.Models
     {
         public string Testo { get; set; }
 
-        public Commento()
+        public Commento(string t)
         {
-
+            this.Testo = t;
         }
 
         public override string ToString()

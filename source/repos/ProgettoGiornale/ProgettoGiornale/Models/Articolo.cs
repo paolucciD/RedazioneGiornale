@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProgettoGiornale.Models
 {
-    public class Articolo
+    public class Articolo: IEquals
     {
         public string Titolo { get; set; }
         public string Autore { get; set; }
@@ -18,6 +18,20 @@ namespace ProgettoGiornale.Models
             this.Commenti = new List<Commento>();
         }
 
-        p
+        public void AggiungiCommento(Commento c)
+        {
+            this.Commenti.Add(c);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{this.Titolo} di {this.Autore}");
+            for(int i = 0; i < this.Commenti.Count;i++)
+            {
+                sb.Append($"\n {this.Commenti[i]}");
+            }
+            return sb.ToString();
+        }
     }
 }

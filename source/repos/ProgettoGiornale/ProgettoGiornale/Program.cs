@@ -12,9 +12,9 @@ namespace ProgettoGiornale
             Articolo a3 = new Articolo("", "");
             g.AggiungiArticolo(a1);
             g.AggiungiArticolo(a2);
-            g.CreaCommentoNormale(a1, "sono contento");
-            g.CreaCommentoNormale(a2, "non ci voleva");
-            g.CreaCommentoRedazione(a2, "affluenza record alle urne");
+            g.CreaCommentoNormale(0, "sono contento");
+            g.CreaCommentoNormale(1, "non ci voleva");
+            g.CreaCommentoRedazione(1, "affluenza record alle urne");
             Console.WriteLine(g.TrovaArticolo(a2));
             Console.WriteLine(g.ToString());
         }

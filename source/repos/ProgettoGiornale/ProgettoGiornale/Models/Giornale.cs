@@ -31,24 +31,24 @@ namespace ProgettoGiornale.Models
             return -1;
         }
 
-        public void CreaCommentoNormale(Articolo indx, string t)
+        public void CreaCommentoNormale(int indx, string t)
         {
             Commento c = new Commento(t);
             for(int i = 0;i < this.Articoli.Count;i++)
             {
-                if(this.Articoli[i]==indx)
+                if(i==indx)
                 {
                     this.Articoli[i].AggiungiCommento(c);
                 }
             }
         }
 
-        public void CreaCommentoRedazione(Articolo indx, string t)
+        public void CreaCommentoRedazione(int indx, string t)
         {
             Commento c = new CommentoDellaRedazione(t);
             for (int i = 0; i < this.Articoli.Count; i++)
             {
-                if (this.Articoli[i] == indx)
+                if (i == indx)
                 {
                     this.Articoli[i].AggiungiCommento((CommentoDellaRedazione)c);
                 }

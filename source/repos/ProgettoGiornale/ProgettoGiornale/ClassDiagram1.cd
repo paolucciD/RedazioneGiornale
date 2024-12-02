@@ -1,31 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ProgettoGiornale.Commento">
-    <Position X="6" Y="3.5" Width="1.5" />
+    <Position X="6.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commento.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ProgettoGiornale.Articolo">
-    <Position X="6.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Articolo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ProgettoGiornale.Giornale">
-    <Position X="8.25" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Giornale.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ProgettoGiornale.CommentoDellaRedazione">
-    <Position X="8.75" Y="4.25" Width="1.5" />
+    <Position X="8.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CommentoDellaRedazione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgettoGiornale.Articolo">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAAAAAAAAAAAAEgAAAAAAAAAAIAIAAAAAAAAQAAAA=</HashCode>
+      <FileName>Articolo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgettoGiornale.Giornale">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAIEAAAAAEAAAAAAAAAAAAAMAAAAAAA=</HashCode>
+      <FileName>Giornale.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

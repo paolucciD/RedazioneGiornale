@@ -11,19 +11,19 @@ namespace ProgettoGiornale.Models
 
         public Giornale()
         {
-            this.Articoli = new List<Articolo>();
+            Articoli = new List<Articolo>();
         }
 
         public void AggiungiArticolo(Articolo ar)
         {
-            this.Articoli.Add(ar);
+            Articoli.Add(ar);
         }
 
-        public int TrovaArticolo (Articolo ar)
+        public int TrovaArticolo(Articolo ar)
         {
-            for (int i = 0; i < this.Articoli.Count; i++)
+            for (int i = 0; i < Articoli.Count; i++)
             {
-                if (this.Articoli[i]==ar)
+                if (Articoli[i] == ar)
                 {
                     return i;
                 }
@@ -34,11 +34,11 @@ namespace ProgettoGiornale.Models
         public void CreaCommentoNormale(int indx, string t)
         {
             Commento c = new Commento(t);
-            for(int i = 0;i < this.Articoli.Count;i++)
+            for (int i = 0; i < Articoli.Count; i++)
             {
-                if(i==indx)
+                if (i == indx)
                 {
-                    this.Articoli[i].AggiungiCommento(c);
+                    Articoli[i].AggiungiCommento(c);
                 }
             }
         }
@@ -46,11 +46,11 @@ namespace ProgettoGiornale.Models
         public void CreaCommentoRedazione(int indx, string t)
         {
             Commento c = new CommentoDellaRedazione(t);
-            for (int i = 0; i < this.Articoli.Count; i++)
+            for (int i = 0; i < Articoli.Count; i++)
             {
                 if (i == indx)
                 {
-                    this.Articoli[i].AggiungiCommento((CommentoDellaRedazione)c);
+                    Articoli[i].AggiungiCommento((CommentoDellaRedazione)c);
                 }
             }
         }
@@ -58,9 +58,9 @@ namespace ProgettoGiornale.Models
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            for(int i = 0; i < this.Articoli.Count; i++)
+            for (int i = 0; i < Articoli.Count; i++)
             {
-                sb.AppendLine($"{this.Articoli[i].ToString()}");
+                sb.AppendLine($"{Articoli[i].ToString()}");
             }
             return sb.ToString();
         }

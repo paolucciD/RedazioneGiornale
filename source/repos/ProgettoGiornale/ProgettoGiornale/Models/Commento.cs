@@ -11,7 +11,7 @@ namespace ProgettoGiornale.Models
 
         public Commento(string t)
         {
-            this.Testo = t;
+            Testo = t;
         }
 
         public override string ToString()

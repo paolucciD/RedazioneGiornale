@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProgettoGiornale.Models
 {
-    internal interface IEquals
+    internal interface IEquatable
     {
+        public bool Equals(Articolo other);
     }
 }

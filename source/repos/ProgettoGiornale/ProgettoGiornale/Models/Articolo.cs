@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProgettoGiornale.Models
 {
-    public class Articolo: IEquals
+    public class Articolo : IEquatable<Articolo>
     {
         public string Titolo { get; set; }
         public string Autore { get; set; }
@@ -13,35 +13,64 @@ namespace ProgettoGiornale.Models
 
         public Articolo(string t, string a)
         {
-            this.Titolo = t;
-            this.Autore = a;
-            this.Commenti = new List<Commento>();
+            Titolo = t;
+            Autore = a;
+            Commenti = new List<Commento>();
         }
 
         public void AggiungiCommento(Commento c)
         {
-            this.Commenti.Add(c);
+            Commenti.Add(c);
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"{this.Titolo} di {this.Autore}");
-            for(int i = 0; i < this.Commenti.Count;i++)
+            sb.Append($"{Titolo} di {Autore}");
+            for (int i = 0; i < Commenti.Count; i++)
             {
-                sb.Append($"\n {this.Commenti[i]}");
+                sb.Append($"\n {Commenti[i]}");
             }
             return sb.ToString();
         }
 
-        public static bool operator ==(Articolo a1, Articolo a2)
+        //public static bool operator ==(Articolo a1, Articolo a2)
+        //{
+        //    return a1.Autore == a2.Autore && a1.Titolo == a2.Titolo;
+        //}
+
+        //public static bool operator !=(Articolo a1, Articolo a2)
+        //{
+        //    return !(a1.Autore == a2.Autore && a1.Titolo == a2.Titolo);
+        //}
+
+        public bool Equals(Articolo other)
         {
-            return a1.Autore == a2.Autore && a1.Titolo == a2.Titolo;
+            if (other == null) return false;
+            else
+            {
+                if (Titolo == other.Titolo && Autore == other.Autore) return true;
+                else
+                {
+                    return false;
+                }
+            }
         }
 
-        public static bool operator !=(Articolo a1, Articolo a2)
+        public override bool Equals(object? obj)
         {
-            return !(a1.Autore == a2.Autore && a1.Titolo == a2.Titolo);
+            if (obj == null) return false;
+            Articolo other = obj as Articolo;
+            if (other == null) return false;
+            else
+            {
+                return Equals(other);
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
